@@ -1,1 +1,84 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Academy Management</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Football Academy Management System</h1>
+    <div id="user-status">
+      <!-- Login/logout buttons will appear here -->
+    </div>
+  </header>
+  
+  <main>
+    <section id="login-section" class="active">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+    </section>
+    
+    <section id="register-section">
+      <h2>Register</h2>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="reg-email">Email:</label>
+          <input type="email" id="reg-email" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password:</label>
+          <input type="password" id="reg-password" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-confirm-password">Confirm Password:</label>
+          <input type="password" id="reg-confirm-password" required>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+    </section>
+    
+    <section id="dashboard-section">
+      <h2>Dashboard</h2>
+      <div class="dashboard-menu">
+        <button id="view-players">View All Players</button>
+        <button id="add-player">Add New Player</button>
+        <button id="view-statistics">View Statistics</button>
+      </div>
+      
+      <div id="content-area">
+        <!-- Dynamic content will be loaded here -->
+      </div>
+    </section>
+    
+    <section id="add-player-section">
+      <h2>Add New Player</h2>
+      <form id="add-player-form">
+        <!-- Player form fields will go here -->
+      </form>
+    </section>
+  </main>
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  
+  <!-- Application Scripts -->
+  <script src="js/firebase-config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
